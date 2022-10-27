@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.lr-container,
+.lr-body,
+.lr-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lr-container {
+    position: absolute;
+    /* 屏幕的百分百视图 */
+    width: 100vw;
+    height: 100vh;
+    background: #00000053;
+}
+
+.lr-body {
+    position: relative;
+    background: white;
+    flex-direction: column;
+    width: 390px;
+    height: 220px;
+    font-family: "微软雅黑", serif;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: scale(0.6);
+    white-space: nowrap;
+    opacity: 0;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.22);
+    transition: all .3s;
+}
+
+.lr-status {
+    margin: 0;
+    color: rgb(62, 62, 62);
+    font-size: 24px;
+    padding-bottom: 25px;
+    transform: translateY(-20px);
+}
+
+.lr-description {
+    font-size: 14px;
+    transform: translateY(-20px);
+}
+
+.lr-btn {
+    position: absolute;
+    bottom: 0;
+    background-color: #fafafa;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    height: 55px;
+}
+
+.lr-btn>button {
+    border: 0;
+    background: #57a6db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.lr-btn>button:hover{
+    background: #4270f0;
+    opacity: .8;
+}

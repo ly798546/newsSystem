@@ -1,0 +1,59 @@
+<!--
+// +----------------------------+
+// | Name: 登录&注册
+// +----------------------------+
+// | Author: LuoYing
+// +----------------------------+
+// | QQ: 2500548696
+// +----------------------------+
+// | Date: 2022年5月16日
+// +----------------------------+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录&用户注册</title>
+    <!-- 网页图标 -->
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <!-- css样式 -->
+    <link rel="stylesheet" href="css/LoginRegister.css">
+    <link rel="stylesheet" href="css/LRstatus.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/captcha.css">
+    <!-- jQuery导入 -->
+    <script src="js/jQuery-min-3.6.0.js"></script>
+    <!-- js样式 -->
+    <script src="js/LoginRegister.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <span class="hint">没有账号？去注册</span>
+        <span class="picture"><img src="images/electro.png" title="快速清空"></span>
+        <div class="slide">
+            <form action="../Journpage/adminPage.html" method="post" class="form login">
+                <h1 class="title" title="登录">login</h1>
+                <div><label>用户名</label><input type="text" name="username"></div>
+                <div><label>密码</label><input type="password" name="password"><span class="eye" title="快速清空"><img
+                            src="images/ceye.png" alt="眼睛"></span></div>
+                <input type="submit" value="登录">
+            </form>
+            <form action="LoginRegister.html" method="post" class="form register" style="display: none; opacity: 0;">
+                <h1 class="title" title="注册">register</h1>
+                <div><label>用户名</label><input type="text" name="name"></div>
+                <div style="position: relative"><label>邮箱</label><input type="text" name="email" id="sendEmail"><span class="captcha" title="验证码"><img src="images/captcha.png" width="20" alt="验证码"></span></div>
+                <div><label>密码</label><input type="password" name="pwd"><span class="eye"><img
+                            src="images/ceye.png" alt="眼睛"></span></div>
+                <div><label>确认密码</label><input type="password" name="rpwd"><span class="eye"><img
+                            src="images/ceye.png" alt="眼睛"></span></div>
+                <input type="submit" value="注册">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

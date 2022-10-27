@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻发布φ(*￣0￣)φ(*￣0￣)</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="css/commonpage.css">
+    <link rel="stylesheet" href="css/module.css">
+    <script src="js/jQuery-min-3.6.0.js"></script>
+    <script src="js/journ.js"></script>
+</head>
+<body>
+    <div class="backdrop">
+        <div class="list">
+            <h2 class="oneself"><img src="images/favicon.png" alt="" width="45px" align="center">管理中心</h2>
+            <ul class="list-fun">
+                <li id="journList">新闻列表</li>
+                <li id="audit">审核中</li>
+                <li id="succeed">已发布</li>
+                <li id="fail">已驳回</li>
+                <li id="index">返回首页</li>
+                <li>. . .</li>
+            </ul>
+        </div>
+        <div class="body-show">
+            <div class="body-title">
+                <div class="fun-title">新闻列表</div>
+                <div class="journ-search">
+                    <input type="text" class="search" name="search" autocomplete="off" placeholder="新闻的标题或类型 . . ." maxlength="32"><span id="search">搜索</span>
+                    <span id="issued">发布新闻</span>
+                </div>
+            </div>
+            <div class="t-head">
+                <table>
+                    <tr>
+                        <th>发布时间</th>
+                        <th>标题</th>
+                        <th>内容</th>
+                        <th>类型</th>
+                        <th>访问量</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="t-body">
+                <!--...-->
+            </div>
+        </div>
+    </div>
+    <!--发布新闻-->
+    <div class="issued-backdrop" style="display: none;">
+        <div class="issued-container">
+            <h2><img src="images/favicon.png" alt="" width="45px" align="center">发布新闻</h2>
+            <form action="javascript:;" method="post">
+                <div><label for="title">标题：</label><input type="text" name="title" id="title" autocomplete="off" maxlength="50"></div>
+                <div>
+                    <label for="type">类型：</label><select name="type" id="type">
+                    <option value="0">请选择</option>
+                    <option value="文学">文学</option>
+                    <option value="发展">发展</option>
+                    <option value="教育">教育</option>
+                    <option value="科技">科技</option>
+                    <option value="神话">神话</option>
+                    <option value="体育">体育</option>
+                    <option value="法律">法律</option>
+                    <option value="体育">体育</option>
+                    <option value="游戏">游戏</option>
+                    <option value="财经">财经</option>
+                    <option value="其他">其他</option>
+                </select>
+                </div>
+                <div>
+                    <label for="content" class="content" style="font-size: 14px;">内容描述</label>
+                </div>
+                <div>
+                    <textarea name="content" id="content" cols="100" rows="12" placeholder="请输入你的新闻内容 . . ."></textarea>
+                </div>
+                <input type="submit" id="sub" value="发布"><input type="button" id="cancel-btn" value="取消">
+            </form>
+        </div>
+    </div>
+
+    <!--新闻修改-->
+    <div class="modify-backdrop" style="display: none;">
+        <div class="modify-container">
+            <h2><img src="images/favicon.png" alt="" width="45px" align="center">新闻修改</h2>
+            <form action="javascript:;" method="post">
+                <div><label for="title2">标题：</label><input type="text" name="title" id="title2" autocomplete="off" maxlength="50"></div>
+                <div>
+                    <label for="type2">类型：</label><select name="type" id="type2">
+                    <option value="0">请选择</option>
+                    <option value="文学">文学</option>
+                    <option value="发展">发展</option>
+                    <option value="教育">教育</option>
+                    <option value="科技">科技</option>
+                    <option value="神话">神话</option>
+                    <option value="体育">体育</option>
+                    <option value="法律">法律</option>
+                    <option value="体育">体育</option>
+                    <option value="游戏">游戏</option>
+                    <option value="财经">财经</option>
+                    <option value="其他">其他</option>
+                </select>
+                </div>
+                <div>
+                    <label for="content" class="content" style="font-size: 14px;">内容描述</label>
+                </div>
+                <div>
+                    <textarea name="content" id="content2" cols="100" rows="12" placeholder="请输入你的新闻内容 . . ."></textarea>
+                </div>
+                <input type="submit" id="sub2" value="修改"><input type="button" id="cancel-btn2" value="取消">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

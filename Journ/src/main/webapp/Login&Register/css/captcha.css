@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.ca-backdrop {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000027;
+    position: absolute;
+}
+
+.ca-container {
+    background-color: #fff;
+    width: 320px;
+    height: 180px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.34);
+    transform: scale(.6);
+    opacity: 0;
+    transition: all .3s;
+}
+
+.ca-title {
+    position: relative;
+    bottom: 20px;
+}
+
+#captcha,
+.ca-p,
+#ca-time {
+    border: 0;
+    height: 35px;
+    line-height: 35px;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: black;
+}
+
+#captcha::placeholder {
+    font-size: 14px;
+}
+
+.ca-body {
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+#ca-time {
+    position: absolute;
+    right: 12px;
+    display: inline-block;
+    color: #888;
+}
+
+.ca-btn button {
+    position: relative;
+    top: 20px;
+    background: #57a6db;
+    border: 0;
+    outline: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+    color: #fff;
+    margin: 0 7px;
+}
+
+.ca-btn button:hover {
+    background: #678cf2;
+}

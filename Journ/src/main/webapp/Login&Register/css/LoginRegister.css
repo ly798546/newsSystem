@@ -1,0 +1,249 @@
+/* 
+// ==============================
+// | 使用本代码请保留此头部信息
+// +----------------------------+
+// | Name: 登录&注册
+// +----------------------------+
+// | Author: luoying
+// +----------------------------+
+// | QQ: 2500548696
+// +----------------------------+
+// | Date: 2022年5月16日
+// +----------------------------+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+.slide,
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0d7fb;
+    font-family: '微软雅黑', serif;
+}
+/* 滚动条背景 */
+::-webkit-scrollbar {
+    background-color: #ffffff;
+    width: 3px;
+}
+/* 滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+}
+
+/* 滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #5fbff2;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #53ade0;
+}
+
+::-webkit-scrollbar-thumb:active{
+    background-color: #4696c5;
+}
+
+/* 将密码框的眼睛掩藏 */
+input[type="password"]::-ms-reveal {
+    display: none;
+}
+
+.container {
+    position: relative;
+    background: #fff;
+    width: 650px;
+    height: 350px;
+    box-shadow: 0 0 15px 3px rgba(55, 1, 163, 0.3);
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.slide {
+    position: absolute;
+    /* background: #b123ee; */
+    background-image: linear-gradient(to top, #b123ee 0%, #e09cfe 100%);
+    height: 480px;
+    width: 320px;
+    right: 5%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.249);
+    transition: all .5s;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    height: 60%;
+    color: #fff;
+    opacity: 1;
+    transition: all .5s;
+}
+
+input {
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    margin: 20px 0;
+    padding: 8px 0;
+    text-indent: 4px;
+    font-size: 17px;
+    color: #fff;
+}
+
+.captcha {
+    position: absolute;
+    right: 5px;
+    bottom: 28px;
+    cursor: pointer;
+    color: #888;
+}
+
+.form div {
+    position: relative;
+    color: #fff;
+}
+
+.form div label {
+    user-select: none;
+    cursor: text;
+    position: absolute;
+    top: 25px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-indent: 4px;
+    transition: all .3s;
+}
+
+input[type=submit] {
+    background: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    border: 0;
+    letter-spacing: 3px;
+    transition: all .3s;
+}
+
+.login input[type=submit] {
+    color: #b123ee;
+}
+
+.register input[type=submit] {
+    color: #1296db;
+}
+
+input[type=submit]:hover {
+    box-shadow: inset 0 0 25px #fff;
+    background: transparent;
+    color: #fff;
+}
+
+.title {
+    color: #fff;
+    letter-spacing: 5px;
+    margin: 15px 0;
+    /* 文字转大小写uppercase,lowercase */
+    text-transform: uppercase;
+    user-select: none;
+    cursor: default;
+}
+
+.hint {
+    padding: 10px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 10%;
+    left: 13%;
+    cursor: pointer;
+    background: #cc68f7;
+    color: #fff;
+    transition: all .5s;
+}
+
+.hint:hover {
+    opacity: 0.7;
+}
+
+.picture {
+    position: absolute;
+    left: 55px;
+    top: 15%;
+    transition: all .5s;
+}
+
+.picture>img {
+    /* 禁止图片被随意拖拽 */
+    -webkit-user-drag: none;
+    transition: all .5s;
+}
+
+.picture:hover img {
+    transform: scale(1.05) translateY(-15px);
+}
+
+.eye {
+    position: absolute;
+    display: none;
+    user-select: none;
+    height: 32px;
+    top: 25px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.eye img {
+    -webkit-user-drag: none;
+    width: 25px;
+}
+
+/* 轻提示 */
+.box-body {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 12px 23px;
+    cursor: default;
+    white-space: nowrap;
+    user-select: none;
+    transform: scale(0.6);
+    opacity: 0;
+    transition: all .3s;
+}
+
+.box-body .box-text {
+    color: white;
+    letter-spacing: 2px;
+}
+/* 加载 */
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: #00000053;
+    position: absolute;
+    color: white;
+}
